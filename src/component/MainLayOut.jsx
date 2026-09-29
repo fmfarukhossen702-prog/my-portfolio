@@ -14,7 +14,7 @@ import Readme from '../pages/Readme'
 const MainLayOut = () => {
   const fileDirectory = useSelector((state) => state.dataStor.fileDirectory);
   const page = useSelector((state)=> state.dataStor.activeData)
-   console.log(page)
+  
   return (
     <div className="  text-black">
       <div className=" flex ">
@@ -24,10 +24,13 @@ const MainLayOut = () => {
           <SideBar />
           <FileExplor />
         </div>
-        <div className=" relative  w-full">
-          <FileNavbar />
-          <BreadCrumb />
-          <div className=" w-full h-screen overflow-hidden overflow-y-scroll absolute top-0 -z-3 left-0  bg-[#1C1C1C] ">
+        <div className="flex h-screen w-full flex-col overflow-hidden bg-[#1C1C1C]">
+          <div className="">
+            <FileNavbar />
+            <BreadCrumb />
+          </div>
+
+          <div className="flex-1 overflow-y-auto">
             {page.id === 1 && <Home />}
             {page.id === 2 && <About />}
             {page.id === 3 && <Contact />}

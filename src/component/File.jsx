@@ -10,7 +10,7 @@ import { navDataReducer } from "../redux/dataStor";
 
 const file = [
   {
-    id:1,
+    id: 1,
     name: "home.jsx",
     folder: "src/",
     Icon: FaReact,
@@ -49,7 +49,7 @@ const file = [
     name: "skills.json",
     folder: "src/",
     Icon: VscJson,
-    color: "text-[#e100ff]",
+    color: "text-[#ffff02]",
   },
   {
     id: 7,

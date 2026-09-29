@@ -6,21 +6,42 @@ export const dataStore = createSlice({
     search: false,
     fileDirectory: false,
     navData: [],
-    activeData:{name:"home.jsx", id: 1},
-  
+    activeData: { name: "home.jsx", id: 1 },
+    fileNavActiveData: [{ name: "home.jsx", id: 1 }],
   },
   reducers: {
-    searchReducer: (state,action ) => {
+    searchReducer: (state, action) => {
       state.search = action.payload;
     },
-    fileDirectoryReducer: (state,action ) => {
+    fileDirectoryReducer: (state, action) => {
       state.fileDirectory = action.payload;
     },
-    navDataReducer: (state,action ) => {
+    navDataReducer: (state, action) => {
       state.navData = action.payload;
     },
-    activeDataReducer: (state,action ) => {
+    activeDataReducer: (state, action) => {
       state.activeData = action.payload;
+    },
+    fileNavActiveDataReducer: (state, action) => {
+      if (
+        !state.fileNavActiveData.find((item) => item.id === action.payload.id)
+      ) {
+        state.fileNavActiveData = [action.payload, ...state.fileNavActiveData];
+      }
+    },
+    deleteReducer: (state, action) => {
+      state.fileNavActiveData = state.fileNavActiveData.filter(
+        (item) => item.id !== action.payload,
+      );
+
+      if (state.fileNavActiveData.length === 0) {
+        state.fileNavActiveData = [{ name: "home.jsx", id: 1 }];
+
+        state.activeData = {
+          name: "home.jsx",
+          id: 1,
+        };
+      }
     },
   },
 });
@@ -31,6 +52,8 @@ export const {
   navDataReducer,
   fileDirectoryReducer,
   activeDataReducer,
+  fileNavActiveDataReducer,
+  deleteReducer,
 } = dataStore.actions;
 
 export default dataStore.reducer;
