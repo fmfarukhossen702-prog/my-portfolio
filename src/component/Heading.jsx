@@ -20,10 +20,10 @@ const Heading = () => {
           <div className=" bg-[#f50808] h-3 w-3 rounded-full "> </div>
           <div className=" bg-[#6bf508] h-3 w-3 rounded-full "> </div>
         </div>
-        <div onClick={()=> dispatch(searchReducer(true)) } className=" relative h-6 ">
+        <div onClick={()=> dispatch(searchReducer(true)) } className=" mt-[2px] relative h-6 ">
           <label
             htmlFor=""
-            className=" text-[11px]! w-full absolute text-[#8a8580]  flex justify-center gap-4 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className=" text-[11px]! w-full absolute text-[#8a8580]  flex justify-center gap-3 items-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           >
             <FcSearch className=" text-[14px]!  " />
             <span>faruk hosen </span>
@@ -45,7 +45,7 @@ const Heading = () => {
             readOnly
             // onClick={onSearchClick}
             aria-label="Open file search"
-            className="w-84 h-6 cursor-pointer rounded-sm outline-none px-5 border border-[#ffffff26] text-white bg-[#2A2A3D]"
+            className="w-82 h-6 cursor-pointer rounded-sm outline-none px-3 border border-[#ffffff26] text-white bg-[#2A2A3D]"
           />
         </div>
         <div> </div>

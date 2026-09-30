@@ -30,19 +30,48 @@ export const dataStore = createSlice({
       }
     },
     deleteReducer: (state, action) => {
+      // যে file-এ click হয়েছে সেটা delete
       state.fileNavActiveData = state.fileNavActiveData.filter(
         (item) => item.id !== action.payload,
       );
 
+      // কোনো file না থাকলে Home আবার automatically add হবে
       if (state.fileNavActiveData.length === 0) {
-        state.fileNavActiveData = [{ name: "home.jsx", id: 1 }];
+        state.fileNavActiveData = [
+          {
+            name: "home.jsx",
+            id: 1,
+          },
+        ];
 
         state.activeData = {
           name: "home.jsx",
           id: 1,
         };
       }
+
+      // যদি active file-টাই delete হয়ে যায়
+      else if (state.activeData.id === action.payload) {
+        // delete করার পর প্রথম tab-কে active করলাম
+        state.activeData = state.fileNavActiveData[0];
+      }
     },
+    // deleteReducer: (state, action) => {
+    //   // Home কখনো delete হবে না
+
+    //   state.fileNavActiveData = state.fileNavActiveData.filter(
+    //     (item) => item.id !== action.payload,
+    //   );
+
+    //   if (state.fileNavActiveData.length === 0) {
+    //     state.fileNavActiveData = [{ name: "home.jsx", id: 1 }];
+
+    //     state.activeData = {
+    //       name: "home.jsx",
+    //       id: 1,
+    //     };
+    //   }
+    // },
   },
 });
 

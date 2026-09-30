@@ -28,6 +28,7 @@ const FileExplor = ({ className = " " }) => {
                     activeDataReducer({
                       name: items.name,
                       id: items.id,
+                      folder: items.folder,
                     }),
                   ),
                     dispatch(
@@ -38,7 +39,7 @@ const FileExplor = ({ className = " " }) => {
                     ));
                 }}
                 key={items.id ?? items.name}
-                className={` ${activeList.id == items.id ? " bg-[#333333] border-l-[1.5px] border-l-[#0d82f8] hover:bg-primary " : "border-transparent"}   flex pl-5 py-1 justify-between hover:bg-[#33333389] cursor-pointer items-center text-white`}
+                className={` ${activeList.id == items.id ? " bg-[#333333] border-l-[1.5px] border-l-[#0d82f8] hover:bg-primary " : "border-transparent"}   flex pl-5 py-1 justify-between hover:bg-[#33333389] duration-200  cursor-pointer items-center text-white`}
               >
                 <Icon className={`${items.color} text-lg `} />
                 <span
