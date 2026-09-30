@@ -14,7 +14,7 @@ const Heading = () => {
     <div className="fixed top-0 left-0 z-10 w-full ">
 
       {/* search part  */}
-      <div className=" pl-4 bg-[#1A1A2E] flex justify-between h-7.5  ">
+      <div className=" pl-4 bg-[#1A1A2E] flex justify-between h-7  ">
         <div className="flex items-center gap-2">
           <div className=" bg-[#f56e08] h-3 w-3 rounded-full "> </div>
           <div className=" bg-[#f50808] h-3 w-3 rounded-full "> </div>
