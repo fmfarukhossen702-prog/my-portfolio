@@ -16,7 +16,7 @@ const FileNavbar = () => {
     fileNav.find((file) => file.id === nav.id),
   );
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className=" pt-13 h-20 w-full bg-[#232324] ">

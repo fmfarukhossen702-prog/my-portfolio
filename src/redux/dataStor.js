@@ -29,6 +29,8 @@ export const dataStore = createSlice({
         state.fileNavActiveData = [action.payload, ...state.fileNavActiveData];
       }
     },
+    
+    // delet reducer 
     deleteReducer: (state, action) => {
       // যে file-এ click হয়েছে সেটা delete
       state.fileNavActiveData = state.fileNavActiveData.filter(

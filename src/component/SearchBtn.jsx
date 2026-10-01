@@ -7,6 +7,7 @@ import { activeDataReducer, fileNavActiveDataReducer } from "../redux/dataStor";
 
 const SearchBtn = () => {
   const list = useSelector((state) => state.dataStor.navData);
+  console.log(list)
   const activeList = useSelector((state) => state.dataStor.activeData);
   const dispatch = useDispatch();
   const searchContent = useSelector((state) => state.dataStor.search);
@@ -73,7 +74,10 @@ const SearchBtn = () => {
                 FILES
               </h6>
             </div>
+
+
             {/* secend part  */}
+
             <ul className="flex flex-col mt-3 ">
               {filterList.map((items) => {
                 const Icon = items.Icon;

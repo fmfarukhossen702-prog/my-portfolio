@@ -4,17 +4,18 @@ import FileExplor from "./FileExplor";
 import { useSelector } from "react-redux";
 import FileNavbar from "./FileNavbar";
 import BreadCrumb from "./BreadCrumb";
-import Home from '../pages/Home'
-import About from '../pages/About'
-import Contact from '../pages/Contact'
-import Experiences from '../pages/Experiences'
-import Projects from '../pages/Projects'
-import Readme from '../pages/Readme'
+import Home from "../pages/Home";
+import About from "../pages/About";
+import Contact from "../pages/Contact";
+import Experiences from "../pages/Experiences";
+import Projects from "../pages/Projects";
+import Readme from "../pages/Readme";
+import Skill from "../pages/Skill";
 
 const MainLayOut = () => {
   const fileDirectory = useSelector((state) => state.dataStor.fileDirectory);
-  const page = useSelector((state)=> state.dataStor.activeData)
-  
+  const page = useSelector((state) => state.dataStor.activeData);
+
   return (
     <div className="  text-black">
       <div className=" flex ">
@@ -29,14 +30,14 @@ const MainLayOut = () => {
             <FileNavbar />
             <BreadCrumb />
           </div>
-
-          <div className="flex-1 overflow-y-auto">
+          
+          <div className="flex-1 overflow-y-auto  [&::-webkit-scrollbar]:w-2  [&::-webkit-scrollbar-track]:bg-black  [&::-webkit-scrollbar-thumb]:bg-[#333] [&::-webkit-scrollbar-thumb]:rounded-full ">
             {page.id === 1 && <Home />}
             {page.id === 2 && <About />}
             {page.id === 3 && <Contact />}
             {page.id === 4 && <Experiences />}
             {page.id === 5 && <Projects />}
-            {page.id === 6 && <Projects />}
+            {page.id === 6 && <Skill />}
             {page.id === 7 && <Readme />}
           </div>
         </div>

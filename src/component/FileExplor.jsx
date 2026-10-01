@@ -6,7 +6,6 @@ const FileExplor = ({ className = " " }) => {
   const list = useSelector((state) => state.dataStor.navData);
   const activeList = useSelector((state) => state.dataStor.activeData);
   // console.log(activeList);
-
   const dispatch = useDispatch();
 
   return (
