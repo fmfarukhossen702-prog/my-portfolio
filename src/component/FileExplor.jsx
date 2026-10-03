@@ -10,7 +10,7 @@ const FileExplor = ({ className = " " }) => {
 
   return (
     <div
-      className={`h-full pt-16 bg-[#232324] border-r border-r-[#ffffff2d] min-w-0 flex-1 ${className}`}
+      className={`h-full min-w-0 flex-1 overflow-y-auto border-r border-r-[#ffffff2d] bg-[#232324] pt-16 ${className}`}
     >
       <p className="text-[11px] pl-4  text-[#c3c0c0] font-medium tracking-[1px] ">
         PORTFOLIO

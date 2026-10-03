@@ -34,7 +34,7 @@ const About = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="p-12 text-white font-mono max-w-5xl"
+      className="max-w-5xl p-5 font-mono text-white md:p-12"
     >
       {/* Sub-heading */}
       <motion.h2
@@ -47,7 +47,7 @@ const About = () => {
       {/* Main Title */}
       <motion.h1
         variants={itemVariants}
-        className="text-4xl font-extrabold font-syne mb-6 text-white tracking-tight"
+        className="mb-6 text-3xl font-extrabold tracking-tight text-white font-syne md:text-4xl"
       >
         Designing & Building{" "}
         <span className="text-[#FF6FD8]">Modern Frontend</span> Interfaces.
@@ -89,7 +89,7 @@ const About = () => {
           <FaCode className="text-[#2effdcd6]" /> Technologies I Work With:
         </h3>
 
-        <ul className="grid grid-cols-4 gap-3 text-xs">
+        <ul className="grid grid-cols-1 gap-3 text-xs sm:grid-cols-2 md:grid-cols-4">
           {[
             { name: "React.js", color: "text-[#31f6e9a5]" },
             { name: "JavaScript (ES6+)", color: "text-[#f7df1e]" },
@@ -117,7 +117,7 @@ const About = () => {
       {/* Education & Current Goals */}
       <motion.div
         variants={itemVariants}
-        className="mt-10 grid grid-cols-3 gap-4"
+        className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3"
       >
         <div className="bg-[#222222] border border-[#ffffff15] p-5 rounded-md">
           <FaGraduationCap className="text-2xl text-[#38bdf8] mb-2" />

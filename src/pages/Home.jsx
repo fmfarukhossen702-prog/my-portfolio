@@ -40,7 +40,7 @@ const Home = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="p-12"
+      className="p-5 md:p-12"
     >
       {/* Hello World Heading */}
       <motion.h2 variants={itemVariants} className="text-sm text-[#2effdcd6]">
@@ -48,36 +48,54 @@ const Home = () => {
       </motion.h2>
 
       {/* Name Title */}
-      
+
       <motion.div
         variants={itemVariants}
-        className="text-4xl font-extrabold mt-5"
+        className="mt-5 text-4xl font-extrabold"
       >
-        <h1 className="text-white text-5xl font-syne tracking-[-5px]">
-          F <span className="text-[55px]">a</span>{" "}
-          <span className="text-[55px]">r</span>{" "}
-          <span className="text-[55px]">u</span>{" "}
-          <span className="text-[55px]">k</span>
+        <h1 className="font-syne text-4xl tracking-[-3px] text-white md:text-5xl md:tracking-[-5px]">
+          F{" "}
+          <span className="text-[clamp(2rem,8vw,3.4rem)] md:text-[55px]">
+            a
+          </span>{" "}
+          <span className="text-[clamp(2rem,8vw,3.4rem)] md:text-[55px]">
+            r
+          </span>{" "}
+          <span className="text-[clamp(2rem,8vw,3.4rem)] md:text-[55px]">
+            u
+          </span>{" "}
+          <span className="text-[clamp(2rem,8vw,3.4rem)] md:text-[55px]">
+            k
+          </span>
         </h1>
 
-        <h1 className="text-[#FF6FD8] font-syne text-5xl tracking-[-5px]">
-          H <span className="text-[55px]">o</span>{" "}
-          <span className="text-[55px]">s</span>{" "}
-          <span className="text-[55px]">e</span>{" "}
-          <span className="text-[55px]">n</span>
+        <h1 className="font-syne text-4xl tracking-[-3px] text-[#FF6FD8] md:text-5xl md:tracking-[-5px]">
+          H{" "}
+          <span className="text-[clamp(2rem,8vw,3.4rem)] md:text-[55px]">
+            o
+          </span>{" "}
+          <span className="text-[clamp(2rem,8vw,3.4rem)] md:text-[55px]">
+            s
+          </span>{" "}
+          <span className="text-[clamp(2rem,8vw,3.4rem)] md:text-[55px]">
+            e
+          </span>{" "}
+          <span className="text-[clamp(2rem,8vw,3.4rem)] md:text-[55px]">
+            n
+          </span>
         </h1>
       </motion.div>
 
       {/* Line Divider */}
       <motion.div
         variants={itemVariants}
-        className="mt-2 mb-2.5 bg-[linear-gradient(to_right,#FF6FD8_0%,#FF6FD8_20%,#1C1C1C_100%)] w-86.25 h-0.5"
+        className="mt-2 mb-2.5 h-0.5 w-full max-w-86.25 bg-[linear-gradient(to_right,#FF6FD8_0%,#FF6FD8_20%,#1C1C1C_100%)]"
       />
 
       {/* Tags Badges */}
       <motion.ul
         variants={itemVariants}
-        className="flex text-[11px] gap-2 text-[#bbb9b9]"
+        className="flex flex-wrap gap-2 text-[11px] text-[#bbb9b9]"
       >
         <li className="flex bg-[#272727] gap-2 border py-1.5 px-3 rounded-xs border-[#cccaca5c] items-center">
           <span className="bg-[#2c52fcc6] h-1.5 w-1.5 rounded-full inline-block"></span>
@@ -127,7 +145,7 @@ const Home = () => {
 
       {/* Navigation Buttons */}
       <motion.div variants={itemVariants}>
-        <ul className="mt-6 flex items-center gap-5 font-ui text-[#ffffffa5]">
+        <ul className="mt-6 flex flex-wrap items-center gap-3 font-ui text-[#ffffffa5] md:gap-5">
           <motion.li
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -172,7 +190,7 @@ const Home = () => {
       {/* Stats Cards Grid */}
       <motion.ul
         variants={itemVariants}
-        className="mt-10 grid grid-cols-4 h-23 w-full border border-[#ffffff15] rounded-md bg-[#222222]"
+        className="mt-10 grid h-auto w-full grid-cols-2 rounded-md border border-[#ffffff15] bg-[#222222] md:h-23 md:grid-cols-4"
       >
         <li className="col-span-1 flex flex-col border-r hover:bg-[#272727ca] border-r-[#00000024] items-center justify-center gap-2">
           <h2 className="text-xl text-white font-bold">
@@ -205,7 +223,7 @@ const Home = () => {
       {/* Social Links */}
       <motion.ul
         variants={itemVariants}
-        className="mt-4 flex gap-3 text-[10px]! text-[#a2a2a2c9]"
+        className="mt-4 flex flex-wrap gap-3 text-[10px]! text-[#a2a2a2c9]"
       >
         <li>
           <a

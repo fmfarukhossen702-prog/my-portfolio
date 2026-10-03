@@ -87,7 +87,7 @@ const Projects = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="p-8 md:p-12 text-white font-mono max-w-6xl mx-auto"
+      className="mx-auto max-w-6xl p-5 font-mono text-white sm:p-8 md:p-12"
     >
       {/* Sub-heading */}
       <motion.h2
@@ -100,7 +100,7 @@ const Projects = () => {
       {/* Main Title */}
       <motion.h1
         variants={itemVariants}
-        className="text-4xl font-extrabold font-syne mb-4 text-white tracking-tight"
+        className="mb-4 text-3xl font-extrabold tracking-tight text-white font-syne md:text-4xl"
       >
         Things I've <span className="text-[#FF6FD8]">Built</span>.
       </motion.h1>
@@ -133,7 +133,7 @@ const Projects = () => {
       {/* Projects Grid */}
       <motion.div
         variants={itemVariants}
-        className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2"
       >
         <AnimatePresence>
           {filteredProjects.map((project) => (

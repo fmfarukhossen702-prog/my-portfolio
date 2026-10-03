@@ -1,14 +1,16 @@
 // import React, { useState } from "react";
 // import { useSelector } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
-import { activeDataReducer, deleteReducer, fileNavActiveDataReducer } from "../redux/dataStor";
+import {
+  activeDataReducer,
+  deleteReducer,
+  fileNavActiveDataReducer,
+} from "../redux/dataStor";
 import { RxCross1 } from "react-icons/rx";
 const FileNavbar = () => {
   const fileNav = useSelector((state) => state.dataStor.fileNavActiveData);
   const navData = useSelector((state) => state.dataStor.navData);
   const activeList = useSelector((state) => state.dataStor.activeData);
-
-
 
   const dispatch = useDispatch();
 
@@ -19,9 +21,9 @@ const FileNavbar = () => {
   // console.log(data);
 
   return (
-    <div className=" pt-13 h-20 w-full bg-[#232324] ">
-      <div>
-        <ul className=" flex items-center">
+    <div className="h-20 w-full min-w-0 overflow-x-auto bg-[#232324] pt-13">
+      <div className="w-max min-w-full">
+        <ul className="flex items-center">
           {data.map((items) => {
             const Icon = items.Icon;
 

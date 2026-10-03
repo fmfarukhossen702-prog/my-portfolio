@@ -7,17 +7,16 @@ import { activeDataReducer, fileNavActiveDataReducer } from "../redux/dataStor";
 
 const SearchBtn = () => {
   const list = useSelector((state) => state.dataStor.navData);
-  console.log(list)
+  console.log(list);
   const activeList = useSelector((state) => state.dataStor.activeData);
   const dispatch = useDispatch();
   const searchContent = useSelector((state) => state.dataStor.search);
- 
-  const [searchText,setSearchText] = useState("")
- 
-  const filterList = list.filter((item)=> {
-   return  item.name.toLowerCase().includes(searchText.toLocaleLowerCase())
-  })
 
+  const [searchText, setSearchText] = useState("");
+
+  const filterList = list.filter((item) => {
+    return item.name.toLowerCase().includes(searchText.toLocaleLowerCase());
+  });
 
   return (
     <div
@@ -29,7 +28,7 @@ const SearchBtn = () => {
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className=" w-[40%]   border border-[#ffffff27] bg-[#2D2D30] rounded-md "
+          className="max-h-[80dvh] w-[calc(100%-2rem)] overflow-y-auto rounded-md border border-[#ffffff27] bg-[#2D2D30] sm:max-h-none sm:w-[40%]"
         >
           {/* start content  */}
           <div>
@@ -41,7 +40,7 @@ const SearchBtn = () => {
                   <input
                     type="search"
                     value={searchText}
-                    onChange={(e) => setSearchText(e.target.value) }
+                    onChange={(e) => setSearchText(e.target.value)}
                     placeholder=" Go to file or run command... "
                     className=" w-full pr-2 outline-none text-white "
                     name=""
@@ -74,7 +73,6 @@ const SearchBtn = () => {
                 FILES
               </h6>
             </div>
-
 
             {/* secend part  */}
 
@@ -111,16 +109,19 @@ const SearchBtn = () => {
                         {items.name}
                       </span>
                     </div>
-                    <span   className={` ${activeList.id == items.id ? " text-white " : "text-[#aaa8a8a5]"} pr-5 text-[11px] `}  >{items.folder}</span>
-                 
+                    <span
+                      className={` ${activeList.id == items.id ? " text-white " : "text-[#aaa8a8a5]"} pr-5 text-[11px] `}
+                    >
+                      {items.folder}
+                    </span>
                   </li>
                 );
               })}
             </ul>
             {/* thard part  */}
             <div className=" bg-[#00000041] py-2 px-5 flex justify-between items-center text-[#aaa7a7ac] text-[10px] ">
-                  <p>navigate</p>
-                  <p> open AI chat</p>
+              <p>navigate</p>
+              <p> open AI chat</p>
             </div>
           </div>
           {/* end content  */}

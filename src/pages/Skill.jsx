@@ -90,7 +90,7 @@ const Skill = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="p-8 md:p-12 text-white font-mono max-w-6xl mx-auto"
+      className="mx-auto max-w-6xl p-5 font-mono text-white sm:p-8 md:p-12"
     >
       {/* Sub-heading */}
       <motion.h2
@@ -103,7 +103,7 @@ const Skill = () => {
       {/* Main Title */}
       <motion.h1
         variants={itemVariants}
-        className="text-4xl font-extrabold font-syne mb-4 text-white tracking-tight"
+        className="mb-4 text-3xl font-extrabold tracking-tight text-white font-syne md:text-4xl"
       >
         My <span className="text-[#FF6FD8]">Technical</span> Skills Range.
       </motion.h1>
@@ -122,7 +122,7 @@ const Skill = () => {
         {skillCategories.map((category, idx) => (
           <div
             key={idx}
-            className="bg-[#222222] border border-[#ffffff15] p-6 rounded-md"
+            className="rounded-md border border-[#ffffff15] bg-[#222222] p-4 sm:p-6"
           >
             <h3 className="text-sm font-bold text-[#2effdcd6] mb-6 flex items-center gap-2">
               <FaTools /> {category.title}

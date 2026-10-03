@@ -75,7 +75,7 @@ const Experiences = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="p-12 text-white font-mono max-w-5xl"
+      className="max-w-5xl p-5 font-mono text-white md:p-12"
     >
       {/* Sub-heading */}
       <motion.h2
@@ -88,7 +88,7 @@ const Experiences = () => {
       {/* Main Title */}
       <motion.h1
         variants={itemVariants}
-        className="text-4xl font-extrabold font-syne mb-4 text-white tracking-tight"
+        className="mb-4 text-3xl font-extrabold tracking-tight text-white font-syne md:text-4xl"
       >
         Where I've <span className="text-[#FF6FD8]">Worked</span> & Grown.
       </motion.h1>
@@ -104,7 +104,7 @@ const Experiences = () => {
       {/* Timeline Section */}
       <motion.div
         variants={itemVariants}
-        className="relative border-l border-[#ffffff15] ml-4 pl-8 space-y-10"
+        className="relative ml-3 space-y-10 border-l border-[#ffffff15] pl-6 sm:ml-4 sm:pl-8"
       >
         {experiences.map((exp, index) => {
           const Icon = exp.icon;
@@ -112,15 +112,15 @@ const Experiences = () => {
             <div key={index} className="relative group">
               {/* Timeline Icon Badge */}
               <div
-                className="absolute -left-[49px] top-0 p-2 bg-[#1c1c1c] border border-[#ffffff25] rounded-full text-sm"
+                className="absolute -left-[37px] top-0 rounded-full border border-[#ffffff25] bg-[#1c1c1c] p-2 text-sm sm:-left-[49px]"
                 style={{ color: exp.color }}
               >
                 <Icon />
               </div>
 
               {/* Content Card */}
-              <div className="bg-[#222222] border border-[#ffffff15] p-6 rounded-md hover:border-[#ffffff35] transition-all">
-                <div className="flex justify-between items-start mb-2">
+              <div className="rounded-md border border-[#ffffff15] bg-[#222222] p-4 transition-all hover:border-[#ffffff35] sm:p-6">
+                <div className="mb-2 flex flex-col items-start justify-between gap-2 sm:flex-row">
                   <div>
                     <h3 className="text-base font-bold text-white font-syne">
                       {exp.title}

@@ -39,7 +39,7 @@ const Readme = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="p-8 md:p-12 text-white font-mono max-w-5xl mx-auto"
+      className="mx-auto max-w-5xl p-5 font-mono text-white sm:p-8 md:p-12"
     >
       {/* Sub-heading */}
       <motion.h2
@@ -52,7 +52,7 @@ const Readme = () => {
       {/* Main Title */}
       <motion.h1
         variants={itemVariants}
-        className="text-4xl font-extrabold font-syne mb-4 text-white tracking-tight flex items-center gap-3"
+        className="mb-4 flex flex-wrap items-center gap-3 text-3xl font-extrabold tracking-tight text-white font-syne md:text-4xl"
       >
         <FaBookOpen className="text-[#FF6FD8]" /> README
         <span className="text-[#2effdcd6]">.md</span>
@@ -72,7 +72,7 @@ const Readme = () => {
         className="bg-[#222222] border border-[#ffffff15] rounded-md overflow-hidden"
       >
         {/* Markdown File Header Bar */}
-        <div className="bg-[#1c1c1c] border-b border-[#ffffff15] px-5 py-3 flex items-center justify-between text-xs text-[#ffffff86]">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#ffffff15] bg-[#1c1c1c] px-4 py-3 text-xs text-[#ffffff86] sm:px-5">
           <div className="flex items-center gap-2">
             <FaTerminal className="text-[#2effdcd6]" />
             <span className="text-white font-bold">
@@ -85,7 +85,7 @@ const Readme = () => {
         </div>
 
         {/* Markdown Body Content */}
-        <div className="p-6 md:p-8 space-y-8 text-xs leading-6 text-[#ffffffa6]">
+        <div className="space-y-8 p-4 text-xs leading-6 text-[#ffffffa6] sm:p-6 md:p-8">
           {/* Section 1: Intro */}
           <div className="space-y-3">
             <h3 className="text-base font-bold text-white flex items-center gap-2 border-b border-[#ffffff10] pb-2">
@@ -107,7 +107,7 @@ const Readme = () => {
             <h3 className="text-sm font-bold text-white flex items-center gap-2 border-b border-[#ffffff10] pb-2">
               <span className="text-[#2effdcd6]">##</span>{" "}
               {/* <MdQuickreferenceApi /> */}
-               Current Status & Focus
+              Current Status & Focus
             </h3>
             <ul className="space-y-2 pl-2">
               <li className="flex items-start gap-2">

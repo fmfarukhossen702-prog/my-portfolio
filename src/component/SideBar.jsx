@@ -8,19 +8,21 @@ import { useDispatch, useSelector } from "react-redux";
 import { fileDirectoryReducer, searchReducer } from "../redux/dataStor";
 
 const SideBar = () => {
-    
-    const dispatch = useDispatch();
-    const fileDirectory = useSelector((state) => state.dataStor.fileDirectory);
-
+  const dispatch = useDispatch();
+  const fileDirectory = useSelector((state) => state.dataStor.fileDirectory);
 
   return (
-    <div className=" pt-18 h-screen w-12.5 bg-primary flex flex-col border border-r-[#ffffff1a] items-center justify-between pb-5 ">
+    <div className="flex h-full w-12.5 shrink-0 flex-col items-center justify-between border border-r-[#ffffff1a] bg-primary pb-5 pt-18">
       <div className=" text-2xl! text-[#b6b6b6] space-y-5 ">
         <GoFileDirectory
           onClick={() => dispatch(fileDirectoryReducer(!fileDirectory))}
           className="cursor-pointer text-white"
         />
-        <VscSearch onClick={()=> {dispatch(searchReducer(true))} } />
+        <VscSearch
+          onClick={() => {
+            dispatch(searchReducer(true));
+          }}
+        />
         <VscSourceControl />
         <BsFileEarmarkPdf />
         <LuCrosshair />

@@ -48,7 +48,7 @@ const Contact = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className="p-8 md:p-12 text-white font-mono max-w-6xl mx-auto"
+      className="mx-auto max-w-6xl p-5 font-mono text-white sm:p-8 md:p-12"
     >
       {/* Sub-heading */}
       <motion.h2
@@ -61,7 +61,7 @@ const Contact = () => {
       {/* Main Title */}
       <motion.h1
         variants={itemVariants}
-        className="text-4xl font-extrabold font-syne mb-4 text-white tracking-tight"
+        className="mb-4 text-3xl font-extrabold tracking-tight text-white font-syne md:text-4xl"
       >
         Get In <span className="text-[#FF6FD8]">Touch</span>.
       </motion.h1>
@@ -79,7 +79,7 @@ const Contact = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Side: Contact Cards & Socials */}
         <motion.div variants={itemVariants} className="space-y-6">
-          <div className="bg-[#222222] border border-[#ffffff15] p-6 rounded-md space-y-5">
+          <div className="space-y-5 rounded-md border border-[#ffffff15] bg-[#222222] p-4 sm:p-6">
             {/* Email */}
             <div className="flex items-center gap-4">
               <div className="p-3 bg-[#272727] border border-[#ffffff15] rounded-md text-[#2effdcd6]">
@@ -91,7 +91,7 @@ const Contact = () => {
                 </p>
                 <a
                   href="mailto:fmfarukhossen702@gmail.com"
-                  className="text-xs text-white hover:text-[#2effdcd6] transition-colors"
+                  className="break-all text-xs text-white transition-colors hover:text-[#2effdcd6]"
                 >
                   fmfarukhossen702@gmail.com
                 </a>
